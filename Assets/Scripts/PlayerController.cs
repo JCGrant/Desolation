@@ -3,27 +3,27 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    public float maxSpeed;
+    public Transform groundCheck;
 
+    public float maxSpeed;
     public float moveForce;
     public float jumpForce;
     public float thrustForce;
 
     public int maxThrustPoints;
 
-    public Transform groundCheck;
 
     private Rigidbody2D rb;
-
     private int groundLayerMask;
+    private GameObject thrustFlame;
+    private Vector3 playerScale;
 
     private bool jumping;
     private bool grounded;
     private bool thrusting;
+    private bool facingRight;
 
     private int thrustPoints;
-
-    private GameObject thrustFlame;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
         grounded = false;
         thrustFlame = transform.Find("Thrust Flame").gameObject;
         thrustPoints = maxThrustPoints;
+        playerScale = transform.localScale;
         InvokeRepeating("Regenerate", 1.0f, 1.0f);
     }
 
@@ -48,6 +49,13 @@ public class PlayerController : MonoBehaviour {
 
         thrusting = Input.GetKey(KeyCode.LeftShift) && thrustPoints > 0;
         thrustFlame.SetActive(thrusting);
+
+        Vector3 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        facingRight = cameraPosition.x - transform.position.x >= 0;
+        int flipScale = facingRight ? 1 : -1;
+        Vector3 newScale = playerScale;
+        newScale.x = flipScale * playerScale.x;
+        transform.localScale = newScale;
     }
 
     private void Regenerate() {
