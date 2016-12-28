@@ -272,8 +272,8 @@ GameObject:
   m_Component:
   - component: {fileID: 459711971}
   - component: {fileID: 459711974}
-  - component: {fileID: 459711973}
   - component: {fileID: 459711972}
+  - component: {fileID: 459711973}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -325,18 +325,20 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &459711973
-BoxCollider:
+--- !u!61 &459711973
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 459711970}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.00000023841858, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.0000001}
 --- !u!33 &459711974
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -491,8 +493,8 @@ GameObject:
   m_Component:
   - component: {fileID: 774755508}
   - component: {fileID: 774755511}
-  - component: {fileID: 774755510}
   - component: {fileID: 774755509}
+  - component: {fileID: 774755510}
   m_Layer: 0
   m_Name: Ceiling (1)
   m_TagString: Untagged
@@ -544,18 +546,20 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &774755510
-BoxCollider:
+--- !u!61 &774755510
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 774755507}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0000001, y: 1}
 --- !u!33 &774755511
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -772,8 +776,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1266320500}
   - component: {fileID: 1266320503}
-  - component: {fileID: 1266320502}
   - component: {fileID: 1266320501}
+  - component: {fileID: 1266320502}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -825,18 +829,20 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1266320502
-BoxCollider:
+--- !u!61 &1266320502
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1266320499}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1}
 --- !u!33 &1266320503
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -936,8 +942,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1530495754}
   - component: {fileID: 1530495757}
-  - component: {fileID: 1530495756}
   - component: {fileID: 1530495755}
+  - component: {fileID: 1530495756}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -989,18 +995,20 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1530495756
-BoxCollider:
+--- !u!61 &1530495756
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1530495753}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.000000059604645}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1}
 --- !u!33 &1530495757
 MeshFilter:
   m_ObjectHideFlags: 0
