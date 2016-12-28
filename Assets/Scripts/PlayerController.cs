@@ -77,7 +77,8 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (thrusting) {
-            rb.AddForce((Vector2.right + Vector2.up) * thrustForce);
+            Vector2 facingDirection = facingRight ? Vector2.right : Vector2.left;
+            rb.AddForce((facingDirection + Vector2.up) * thrustForce);
             thrustPoints -= 1;
         }
     }
