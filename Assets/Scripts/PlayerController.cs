@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     public float thrustForce;
 
     public int maxThrustPoints;
+    public int thrustPoints;
 
 
     private Rigidbody2D rb;
@@ -22,7 +23,10 @@ public class PlayerController : MonoBehaviour {
     private bool thrusting;
     private bool facingRight;
 
-    private int thrustPoints;
+
+    void Awake() {
+        PlayerStateTextManager.SetPlayerController(this);
+    }
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
