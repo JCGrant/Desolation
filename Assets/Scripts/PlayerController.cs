@@ -82,4 +82,11 @@ public class PlayerController : MonoBehaviour {
             thrustPoints -= 1;
         }
     }
+        
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.name == "Super Boost") {
+            other.gameObject.SetActive(false);
+            thrustPoints += 50;
+        }
+    }
 }
