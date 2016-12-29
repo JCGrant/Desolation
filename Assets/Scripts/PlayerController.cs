@@ -24,10 +24,6 @@ public class PlayerController : MonoBehaviour {
     private bool facingRight;
 
 
-    void Awake() {
-        PlayerStateTextManager.SetPlayerController(this);
-    }
-
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         groundLayerMask = 1 << LayerMask.NameToLayer("Ground");
@@ -80,9 +76,11 @@ public class PlayerController : MonoBehaviour {
     }
         
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.name == "Super Boost") {
+        switch (other.gameObject.name) {
+        case "Super Boost":
             other.gameObject.SetActive(false);
             thrustPoints += 50;
+            break;
         }
     }
 }
