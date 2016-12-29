@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
@@ -33,7 +32,6 @@ public class PlayerController : MonoBehaviour {
         thrustFlame = transform.Find("Thrust Flame").gameObject;
         thrustPoints = maxThrustPoints;
         playerScale = transform.localScale;
-        InvokeRepeating("Regenerate", 1.0f, 1.0f);
     }
 
     void Update() {
@@ -56,12 +54,6 @@ public class PlayerController : MonoBehaviour {
         Vector3 newScale = playerScale;
         newScale.x = flipScale * playerScale.x;
         transform.localScale = newScale;
-    }
-
-    private void Regenerate() {
-        if (thrustPoints < maxThrustPoints) {
-            thrustPoints += 1;
-        }
     }
 
     void FixedUpdate() {
