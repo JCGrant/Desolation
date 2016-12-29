@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class GameTextManager : MonoBehaviour {
 
     public Text playerStateText;
+    public Text winText;
 
     private static GameObject player;
     private static PlayerController playerController;
@@ -14,5 +15,6 @@ public class GameTextManager : MonoBehaviour {
             return;
         }
         playerStateText.text = "Thrust Points: " + playerController.thrustPoints.ToString();
+        winText.gameObject.SetActive(playerController.hasWon);
     }
 }

@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
     public int maxThrustPoints;
     public int thrustPoints;
 
+    public bool hasWon;
+
 
     private Rigidbody2D rb;
     private int groundLayerMask;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour {
         grounded = false;
         thrustFlame = transform.Find("Thrust Flame").gameObject;
         thrustPoints = maxThrustPoints;
+        hasWon = false;
         playerScale = transform.localScale;
     }
 
@@ -80,6 +83,10 @@ public class PlayerController : MonoBehaviour {
         case "Super Boost":
             other.gameObject.SetActive(false);
             thrustPoints += 50;
+            break;
+        case "Battery":
+            other.gameObject.SetActive(false);
+            hasWon = true;
             break;
         }
     }
